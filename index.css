@@ -1,0 +1,101 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    zoom: 99.5%;
+}
+
+/* 隱藏滾動條 */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* 測試 css 表示法  : >  */
+/* #menubar div span{
+    border: solid rgb(58, 140, 211) 2px;
+} */
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+    -ms-grid-rows: 50px 30px 45% 45%;
+    grid-template-columns: 60% 40%;
+    /* 左右側的比例 */
+    grid-template-rows: 50px 30px auto 70%;
+    /* 右側的比例 */
+    grid-template-areas: "blockly     menubar" "blockly     title" "blockly     website" "blockly     code";
+}
+
+#blocklyArea {
+    grid-area: blockly;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-row-span: 1;
+}
+
+#menubar {
+    background: whitesmoke;
+    grid-area: menubar;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding: 5px 10px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: auto 36% auto;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-columns: 32% 36% 32%;
+}
+
+#title {
+    grid-area: title;
+    width: 100%;
+    background-color: black;
+    color: yellow;
+    border: 2px dotted red;
+    text-align: center;
+    font-size: 20px;
+    font-family: impact, sans-serif;
+    padding-top: 5px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+}
+
+#websiteFrame {
+    grid-area: website;
+    border: 5px dotted blue;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+}
+
+#website {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
+}
+
+#sourcecode {
+    font-family: sans-serif;
+    grid-area: code;
+    border: 5px solid lightgray;
+    overflow: scroll;
+    margin: 0px;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: code;
+    border: 5px solid lightgray;
+    overflow: scroll;
+    margin: 0px;
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+}
+
+
+/* Edge hack, God I hate this browser */
+
+_:-ms-lang(x),
+#container {
+    width: 98vw;
+}
