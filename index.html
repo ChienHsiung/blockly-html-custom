@@ -37,7 +37,7 @@
                     document.getElementById("exportText").value = Msg.buttons.export.desc;
                     document.getElementById("exportButton").value = Msg.buttons.export.button;
                 }
-                </script>
+            </script>
         </div>
         <div id="title">Blockly web page</div>
         <div id="websiteFrame"><iframe id="website"></iframe></div>
@@ -567,6 +567,7 @@
         }
     </script> -->
 
+    <!-- 工作區 workspace -->
     <xml xmlns="https://developers.google.com/blockly/xml" id="workspaceBlocks" style="display: none">
         <block type="html" id="9oFDR`IIn6rS=HtBc1=;" x="15" y="15">
             <statement name="content">
@@ -639,18 +640,16 @@
 
     <script>
         var toolbox = document.getElementById("toolbox");
-
         var blocklyArea = document.getElementById('blocklyArea');
-
         var options = {
             toolbox: toolbox,
             collapse: true,
-            //        comments : false,
-            //        disable : false,
+            // comments : false,
+            // disable : false,
             maxBlocks: Infinity,
             trashcan: true,
-            //        horizontalLayout : false,
-            //        toolboxPosition : 'start',
+            // horizontalLayout : false,
+            // toolboxPosition : 'start',
             tooltips: true,
             css: true,
             // media: 'https://blockly-demo.appspot.com/static/media/',
